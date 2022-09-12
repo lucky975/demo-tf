@@ -1,0 +1,20 @@
+terraform {
+  required_providers {
+    github = {
+      source = "integrations/github"
+      version = "4.31.0"
+    }
+  }
+}
+
+provider "github" {
+  token = "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"
+}
+
+
+resource "github_repository" "demo-tf" {
+  name        = "demo-tf"
+  description = "My terraform codes"
+
+  visibility = "public"
+  }
